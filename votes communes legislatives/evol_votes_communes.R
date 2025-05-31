@@ -504,7 +504,7 @@ ggplot(graph_def,
     plot.subtitle = element_text(size = 12, , hjust = 0.5),
     plot.caption = element_text(size = 8, color = "gray50", face = "italic"))
 
-
+ 
 
 
 
