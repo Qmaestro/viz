@@ -8,9 +8,4 @@ Tous les commentaires sont dans le code.
 
 
 
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/930d0754-be00-46ab-89d4-725c75051586)
+![image](https://github.com/user-attachments/assets/53d0b7d4-99fa-40b4-8a44-8a14f3407802)
