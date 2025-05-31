@@ -14,7 +14,7 @@ options( "digits"=2, "scipen"=100)
 ############################ CHARGEMENT DES DONNEES ############################
 
 
-
+# test  rtrtrt 
 
 
 # Ecart niveau de vie : https://www.data.gouv.fr/fr/datasets/revenus-des-francais-a-la-commune/#/resources/d3ce0107-416f-42cf-a335-d71f89b00b21
