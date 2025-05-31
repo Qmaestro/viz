@@ -481,7 +481,7 @@ ggplot(graph_def,
   theme_minimal(base_family = "Helvetica") +
   
   labs(
-    title = "Evolution des votes vers le RN ou vers Ensemble, \nen fonction du niveau de vie de la commune, par rapport à son département",
+    title = "Evolution des votes vers le RN ou vers Ensemble, \nen fonction du niveau de vie de la commune, par rapport à son département, en France métropolitaine",
     subtitle = "Bascule entre le RN et Ensemble, lors du 1er tour des législative de 2022 et de 2024",
     caption = "Sources: Data.gouv, Ministère de l'intérieur, INSEE.
     La taille des point est fonction du nombre d'inscrits sur les listes électorales de la commune en 2024
