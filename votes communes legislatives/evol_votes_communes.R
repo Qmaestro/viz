@@ -331,7 +331,7 @@ ggplot(graph_def,
   geom_point(data = graph_def %>% filter(switch == "ENS")) +
   
   
-  scale_x_discrete(limits = c("ENS", "RN"), expand = expansion(add = 0.5))  + # Ajustez l'expansion
+  scale_x_discrete(limits = c("ENS", "RN"), expand = expansion(add = 0.5))  + # Ajuste l'écart entre les 2 positions
   
   
   scale_y_continuous(
@@ -481,11 +481,12 @@ ggplot(graph_def,
   theme_minimal(base_family = "Helvetica") +
   
   labs(
-    title = "Evolution des votes vers le RN ou vers Ensemble, \nen fonction du niveau de vie de la commune, par rapport à son département, en France métropolitaine.",
+    title = "Evolution des votes vers le RN ou vers Ensemble, \nen fonction du niveau de vie de la commune, en France métropolitaine.",
     subtitle = "Bascule entre le RN et Ensemble, lors du 1er tour des législative de 2022 et de 2024",
     caption = "Sources: Data.gouv, Ministère de l'intérieur, INSEE.
     La taille des point est fonction du nombre d'inscrits sur les listes électorales de la commune en 2024
-    @quentin_DataViz") +
+    @quentin_DataViz",
+    y = "Ecart du niveau de la commune par rapport à son département") +
 
   
     theme(
@@ -494,8 +495,9 @@ ggplot(graph_def,
                               size = 0.2,
                               linetype = 3),
     axis.title.x = element_blank(),
-    axis.title.y = element_blank(),
+    #axis.title.y = element_blank(),
     axis.text.x = element_blank(),
+    axis.text.y = element_text(size = 10),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     plot.title = element_text(face = "bold", size = 14, hjust = 0.5, margin = margin(b = 7)),
