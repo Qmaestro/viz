@@ -1,0 +1,25 @@
+Code	Nuance
+EXG	Extrême gauche
+COM	Parti communiste français
+FI	La France insoumise
+SOC	Parti socialiste
+RDG	Parti radical de gauche
+VEC	Les Ecologistes
+DVG	Divers gauche
+UG	Union de la gauche
+ECO	Ecologistes
+REG	Régionaliste
+DIV	Divers
+REN	Renaissance
+MDM	Modem
+HOR	Horizons
+ENS	Ensemble ! (Majorité présidentielle)
+DVC	Divers centre
+UDI	Union des Démocrates et Indépendants
+LR	Les Républicains
+DVD	Divers droite
+DSV	Droite souverainiste
+RN	Rassemblement National
+REC	Reconquête !
+UXD	Union de l'extrême droite
+EXD	Extrême droite
