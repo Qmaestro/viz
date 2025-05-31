@@ -1,4 +1,4 @@
-############ Vote législative 2024 VS Ecart moyenne revenu commune ############
+############ Vote lÃ©gislative 2024 VS Ecart moyenne revenu commune ############
 
 rm(list = ls()) 
 cat("\014")  #Effacer la console
@@ -14,9 +14,6 @@ options( "digits"=2, "scipen"=100)
 ############################ CHARGEMENT DES DONNEES ############################
 
 
-# test  rtrtrt 
-
-
 # Ecart niveau de vie : https://www.data.gouv.fr/fr/datasets/revenus-des-francais-a-la-commune/#/resources/d3ce0107-416f-42cf-a335-d71f89b00b21
 
 
@@ -26,7 +23,7 @@ revenus <-
   print()
 
 
-# Vote législative 1er Tour 2024
+# Vote lÃ©gislative 1er Tour 2024
 # https://www.data.gouv.fr/fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour/
 
 vote_2024 <- 
@@ -37,7 +34,7 @@ vote_2024 <-
 
 
 
-# Vote législative 1er Tour 2022
+# Vote lÃ©gislative 1er Tour 2022
 # https://www.data.gouv.fr/fr/datasets/elections-legislatives-des-12-et-19-juin-2022-resultats-du-1er-tour/
 
 
@@ -108,8 +105,8 @@ vote_def_2024 <-
 
 
 
-# Pour le fichier de 2022, il faut compléter les nom de colonnes manquants.
-# On doit répéter le nom des colonnes de 22 à 29.
+# Pour le fichier de 2022, il faut complÃ©ter les nom de colonnes manquants.
+# On doit rÃ©pÃ©ter le nom des colonnes de 22 Ã  29.
 
 nom_col_2022 <- 
   vote_2022 %>% select(22:29) %>%  colnames() %>% 
@@ -164,7 +161,7 @@ vote_2022_vdef <-
 
 
 
-# On extrait maintenant que ceux qui ont eu le RN ou MP en tête
+# On extrait maintenant que ceux qui ont eu le RN ou MP en tÃªte
 
 
 nuance_2022 
@@ -253,7 +250,7 @@ ggplot(graph_def,
   
   annotate("text",
            x = 1, y = -80,
-           label = "Seules 27 communes ayant voté RN \nau 1er Tour des législatives en 2022,\n ont mis ENS en tête, en juillet 2024",
+           label = "Seules 27 communes ayant votÃ© RN \nau 1er Tour des lÃ©gislatives en 2022,\n ont mis ENS en tÃªte, en juillet 2024",
            hjust = 0.5, vjust = 0.5, size = 4)  +
   
   
@@ -266,7 +263,7 @@ ggplot(graph_def,
   
   annotate("text",
            x = 2, y = - 80,
-           label = "Les communes ayant basculé vers le RN \n ont en moyenne un niveau de vie supérieures \nà celle de leur département",
+           label = "Les communes ayant basculÃ© vers le RN \n ont en moyenne un niveau de vie supÃ©rieures \nÃ  celle de leur dÃ©partement",
            hjust = 0.5, vjust = 0.5, size = 4) +
   
   
@@ -274,7 +271,7 @@ ggplot(graph_def,
   
   
   
-  geom_point(data = graph_def %>% filter(libelle_de_la_commune %in% c("Saint-Raphaël","Toulon")),
+  geom_point(data = graph_def %>% filter(libelle_de_la_commune %in% c("Saint-RaphaÃ«l","Toulon")),
              aes(x = x_jit, y = ecart_commune_dep),
              shape = 21,
              fill = "blue",
@@ -284,13 +281,13 @@ ggplot(graph_def,
   
   
   geom_curve(
-    data =  graph_def %>% filter(libelle_de_la_commune == "Saint-Raphaël"),
+    data =  graph_def %>% filter(libelle_de_la_commune == "Saint-RaphaÃ«l"),
     aes(x = x_jit, y = ecart_commune_dep, xend = x_jit-0.15, yend = ecart_commune_dep+15),
     colour = "black", curvature = -.3, size = .5,
     arrow = arrow(length = unit(0.03, "npc"))) +
   
-  geom_label(data =  graph_def %>% filter(libelle_de_la_commune == "Saint-Raphaël"),
-             aes(x = x_jit-0.14, y =  ecart_commune_dep+17, label = "Saint-Raphaël"),
+  geom_label(data =  graph_def %>% filter(libelle_de_la_commune == "Saint-RaphaÃ«l"),
+             aes(x = x_jit-0.14, y =  ecart_commune_dep+17, label = "Saint-RaphaÃ«l"),
              hjust = 0.5, vjust = 0, colour = "black", label.size = NA, size = 4) +
   
   geom_curve(
@@ -305,7 +302,7 @@ ggplot(graph_def,
   
   
   
-  # Créer une annotation d'une donnée
+  # CrÃ©er une annotation d'une donnÃ©e
   
   geom_point(
     data =  graph_def %>% 
@@ -342,9 +339,9 @@ ggplot(graph_def,
              aes(x = x_jit, y =  ecart_commune_dep+25,
                  label = paste0("La commune de ",
                                 libelle_de_la_commune, 
-                                "\n à un niveau de vie de ",
+                                "\n Ã  un niveau de vie de ",
                                 round(ecart_commune_dep,1),
-                                " % \nplus élevé que celui de son département")),
+                                " % \nplus Ã©levÃ© que celui de son dÃ©partement")),
              hjust = 0.5, vjust = 0, 
              label.size = 1.2, size = 3.5) +
   
@@ -360,9 +357,9 @@ ggplot(graph_def,
              aes(x = x_jit, y =  ecart_commune_dep+25,
                  label = paste0("La commune de ",
                                 libelle_de_la_commune, 
-                                "\n à un niveau de vie de ",
+                                "\n Ã  un niveau de vie de ",
                                 round(ecart_commune_dep,1),
-                                " % \nplus élevé que celui de son département")),
+                                " % \nplus Ã©levÃ© que celui de son dÃ©partement")),
              hjust = 0.5, vjust = 0, 
              label.size = 0, size = 3.5) +
   
@@ -372,10 +369,10 @@ ggplot(graph_def,
   
   
   labs(
-    title = "Evolution des votes vers le RN ou vers Ensemble, \nen fonction du niveau de vie de la commune, par rapport à son département",
-    subtitle = "Bascule entre le RN et Ensemble, lors du 1er tour des législative de 2022 et de 2024",
-    caption = "Sources: Data.gouv, Ministère de l'intérieur, INSEE.
-    La taille des point est fonction du nombre d'inscrits sur les listes électorales de la commune en 2024
+    title = "Evolution des votes vers le RN ou vers Ensemble, \nen fonction du niveau de vie de la commune, par rapport Ã  son dÃ©partement",
+    subtitle = "Bascule entre le RN et Ensemble, lors du 1er tour des lÃ©gislative de 2022 et de 2024",
+    caption = "Sources: Data.gouv, MinistÃ¨re de l'intÃ©rieur, INSEE.
+    La taille des point est fonction du nombre d'inscrits sur les listes Ã©lectorales de la commune en 2024
     @quentin_DataViz") +
   
   theme(
