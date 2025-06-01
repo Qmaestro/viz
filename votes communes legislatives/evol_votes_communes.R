@@ -501,7 +501,7 @@ ggplot(graph_def,
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     plot.title = element_text(face = "bold", size = 14, hjust = 0.5, margin = margin(b = 7)),
-    plot.subtitle = element_text(size = 12, , hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
     plot.caption = element_text(size = 8, color = "gray50", face = "italic"))
 
  
