@@ -31,7 +31,6 @@ options( "digits"=2, "scipen"=100)
 # Données des bibliothèques : https://www.data.gouv.fr/fr/datasets/adresses-des-bibliotheques-publiques-2/
 # Lien du téléchargement :  https://www.data.gouv.fr/fr/datasets/r/e3588487-4732-4b6c-ab12-72d75d7f522f
 
-# TEST test 2
 
 
 biblio <- 

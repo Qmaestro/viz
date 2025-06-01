@@ -506,6 +506,7 @@ ggplot(graph_def,
 
  
 
-
+graph %>% 
+  count(switch)
 
 
