@@ -1,0 +1,17 @@
+Code	Nuance
+DXG	Divers extrême gauche
+RDG	Parti radical de gauche
+NUP	Nouvelle union populaire écologique et sociale
+DVG	Divers gauche
+ECO	Ecologistes
+DIV	Divers
+REG	Régionaliste
+ENS	Ensemble ! (Majorité présidentielle)
+DVC	Divers centre
+UDI	Union des Démocrates et des Indépendants
+LR	Les Républicains
+DVD	Divers droite
+DSV	Droite souverainiste
+REC	Reconquête !
+RN	Rassemblement National
+DXD	Divers extrême droite
